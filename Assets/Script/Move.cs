@@ -7,7 +7,10 @@ public class Move : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        gameObject.AddComponent<BoxCollider2D>();
+
+        Rigidbody2D rb = gameObject.AddComponent<Rigidbody2D>();
+        rb.bodyType = RigidbodyType2D.Static;
     }
 
     // Update is called once per frame
