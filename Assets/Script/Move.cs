@@ -3,12 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Move : MonoBehaviour
-{   public float speed = 3.0f;
-    public Sprite spriteUp;
+{   public Sprite spriteUp;
     public Sprite spriteDown;
     public Sprite spriteLeft;
-    public SpriteRenderer spriteRenderer;
-{  [SerializeField] float speed = 3.0f;
+    [SerializeField] float speed = 3.0f;
+    SpriteRenderer spriteRenderer;
     // Start is called before the first frame update
     void Start()
     {
@@ -37,15 +36,8 @@ public class Move : MonoBehaviour
              pos.x -= speed * Time.deltaTime;
              spriteRenderer.sprite = spriteLeft;
              spriteRenderer.flipX = false;
-        }
-             
- 
-         transform.position = pos;
-     
-        
-    }
          }
-
          transform.position = pos;
     }
 }
+
