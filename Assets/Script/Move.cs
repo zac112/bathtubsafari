@@ -8,6 +8,7 @@ public class Move : MonoBehaviour
     public Sprite spriteDown;
     public Sprite spriteLeft;
     public SpriteRenderer spriteRenderer;
+{  [SerializeField] float speed = 3.0f;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,7 +17,8 @@ public class Move : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    { Vector3 pos = transform.position;
+    { 
+        Vector3 pos = transform.position;
  
          if (Input.GetKey ("w")) {
              pos.y += speed * Time.deltaTime;
@@ -42,8 +44,8 @@ public class Move : MonoBehaviour
      
         
     }
+         }
 
-    void OnMouseDown(){
-        gameObject.transform.position = new Vector3(transform.position.x+1, transform.position.y, transform.position.z);
+         transform.position = pos;
     }
 }
