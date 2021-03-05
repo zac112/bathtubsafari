@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Move : MonoBehaviour
-{  public float speed = 3.0f;
+{  
+    public float speed = 3.0f;
     // Start is called before the first frame update
     void Start()
     {
@@ -12,7 +13,8 @@ public class Move : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    { Vector3 pos = transform.position;
+    { 
+        Vector3 pos = transform.position;
  
          if (Input.GetKey ("w")) {
              pos.y += speed * Time.deltaTime;
@@ -26,14 +28,7 @@ public class Move : MonoBehaviour
          if (Input.GetKey ("a")) {
              pos.x -= speed * Time.deltaTime;
          }
-             
- 
-         transform.position = pos;
-     
-        
-    }
 
-    void OnMouseDown(){
-        gameObject.transform.position = new Vector3(transform.position.x+1, transform.position.y, transform.position.z);
+         transform.position = pos;
     }
 }
