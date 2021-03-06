@@ -8,6 +8,7 @@ TagManager:
   - InvadersReuna
   - InvadersPisara
   - Hole
+  - TasoEntry
   layers:
   - Default
   - TransparentFX
