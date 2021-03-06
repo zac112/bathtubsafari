@@ -22,19 +22,19 @@ public class Move : MonoBehaviour
     { 
         Vector3 pos = transform.position;
  
-         if (Input.GetKey ("w")) {
+         if (Input.GetKey("w") && !Input.GetKey("a") && !Input.GetKey("d"))  {
              pos.y += speed * Time.deltaTime;
              RotateSprite(0);
         }
-         if (Input.GetKey ("s")) {
+         if (Input.GetKey ("s") && !Input.GetKey("a") && !Input.GetKey("d")) {
              pos.y -= speed * Time.deltaTime;
              RotateSprite(1);
         }
-         if (Input.GetKey ("d")) {
+         if (Input.GetKey ("d") && !Input.GetKey("w") && !Input.GetKey("s")) {
              pos.x += speed * Time.deltaTime;
              RotateSprite(2);
         }
-         if (Input.GetKey ("a")) {
+         if (Input.GetKey ("a") && !Input.GetKey("w") && !Input.GetKey("s")) {
              pos.x -= speed * Time.deltaTime;
              RotateSprite(3);
          }

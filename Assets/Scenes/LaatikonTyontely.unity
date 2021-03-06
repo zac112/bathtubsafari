@@ -153,10 +153,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd9dc50e40f4af429e5439451763db2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 3
   spriteUp: {fileID: 21300000, guid: 6ac277919ef1cd947bd59af3d2345a3d, type: 3}
   spriteDown: {fileID: 21300000, guid: aca841978ccc64a468d446fa68a1e5f1, type: 3}
   spriteLeft: {fileID: 21300000, guid: e0691b86e45b50f4b88c8c9d54d931fe, type: 3}
-  speed: 3
 --- !u!212 &321373809
 SpriteRenderer:
   m_ObjectHideFlags: 0
