@@ -23,6 +23,6 @@ public class LevelSelect : MonoBehaviour
 
     void GoToLevelSelection() {
         Timer.secondsSinceStart = 0;
-        SceneManager.LoadScene(5);
+        SceneManager.LoadScene("TasoMenu");
     }
 }
