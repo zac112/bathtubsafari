@@ -8,5 +8,5 @@ Sokoban Readme
 - [ ] Tulppa-sprite
 - [ ] Viemäri-sprite
 - [ ] Vesipyörre-sprite valintakentän pallukoille
-- [x] Valikkonappi in-game
+- [X] Valikkonappi in-game
 - [ ] Valintakenttään tasotunnisteet
