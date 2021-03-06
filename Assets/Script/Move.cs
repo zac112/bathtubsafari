@@ -78,21 +78,15 @@ public class Move : MonoBehaviour
     }
 
     void MoveAnkka(){
-        //Vector3 pos = transform.position;
         if(up){
-            //pos.y += speed * Time.deltaTime;
             rb.MovePosition((Vector2) transform.position + (Vector2.up*speed * Time.deltaTime)); 
         } else if (left){
-            //pos.x -= speed * Time.deltaTime;
             rb.MovePosition((Vector2) transform.position + (Vector2.left*speed * Time.deltaTime)); 
         } else if (down){
-            //pos.y -= speed * Time.deltaTime;
             rb.MovePosition((Vector2) transform.position + (Vector2.down*speed * Time.deltaTime)); 
         } else if (right) {
-            //pos.x += speed * Time.deltaTime;
             rb.MovePosition((Vector2) transform.position + (Vector2.right*speed * Time.deltaTime)); 
         }
-        //transform.position = pos;
     }
 }
 
