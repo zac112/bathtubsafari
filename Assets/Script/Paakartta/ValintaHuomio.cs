@@ -29,9 +29,9 @@ public class ValintaHuomio : MonoBehaviour
     {
         while (true)
         {
-            transform.position += new Vector3(0f, 1f, 0f) * Time.deltaTime;
+            transform.position += new Vector3(0f, 1f, 0f);
             yield return new WaitForSeconds(aikaLiikkeenValissa);
-            transform.position += new Vector3(0f, -1f, 0f) * Time.deltaTime;
+            transform.position += new Vector3(0f, -1f, 0f);
             yield return new WaitForSeconds(aikaLiikkeenValissa);
         }
     }
