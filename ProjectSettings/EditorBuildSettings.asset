@@ -9,9 +9,15 @@ EditorBuildSettings:
     path: Assets/Scenes/Paakartta.unity
     guid: 3c9b6874eb658154b8b5ad8dadb2b94c
   - enabled: 1
+    path: Assets/Scenes/invaders.unity
+    guid: 1b84db9241a328644b829b3e9f8de0fc
+  - enabled: 1
     path: Assets/Scenes/SokobanTasot/Taso1.unity
     guid: 3a5ea7224cffe59428e37bac229cf2a3
   - enabled: 1
-    path: Assets/Scenes/invaders.unity
-    guid: 1b84db9241a328644b829b3e9f8de0fc
+    path: Assets/Scenes/SokobanTasot/Taso2.unity
+    guid: ae6879a2e9548104ca35f3dcc5fad2f3
+  - enabled: 1
+    path: Assets/Scenes/SokobanTasot/Taso3.unity
+    guid: 4730b2909b1f9a846b38ce4f1baf9874
   m_configObjects: {}

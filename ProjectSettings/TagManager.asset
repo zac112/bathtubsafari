@@ -7,6 +7,7 @@ TagManager:
   - PlugTile
   - InvadersReuna
   - InvadersPisara
+  - Hole
   layers:
   - Default
   - TransparentFX
@@ -14,6 +15,32 @@ TagManager:
   - 
   - Water
   - UI
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
   m_SortingLayers:
   - name: Default
     uniqueID: 0
