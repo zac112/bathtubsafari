@@ -3,8 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Move : MonoBehaviour
-{
-    private SpriteRenderer spriteRenderer;
+{   private SpriteRenderer spriteRenderer;
     private int lastDirection;
     private bool up, down, left, right;
     [SerializeField] 
@@ -54,6 +53,7 @@ public class Move : MonoBehaviour
 
             spriteRenderer.sprite = spriteLeft;
             spriteRenderer.flipX = true;
+           
         }
 
         if(Input.GetKeyUp("w") || Input.GetKeyUp(KeyCode.UpArrow)){
