@@ -9,6 +9,8 @@ public class PointOfInterest : MonoBehaviour
     int scene;
     bool visible;
 
+    //Start StartCoroutine("Liike")
+
     void OnMouseDown() {
         SceneManager.LoadScene(scene);
     }
@@ -21,4 +23,5 @@ public class PointOfInterest : MonoBehaviour
         this.visible = visible;
         gameObject.SetActive(visible);
     }
+
 }
