@@ -595,7 +595,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -884.41, y: 420.3}
+  m_AnchoredPosition: {x: -544.61, y: 296}
   m_SizeDelta: {x: 169.77173, y: 41.992798}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &384367754
@@ -1451,7 +1451,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
   m_MaxChunkCount: 16
@@ -1989,7 +1989,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -739.58, y: 420.3}
+  m_AnchoredPosition: {x: -406.67, y: 296}
   m_SizeDelta: {x: 106.107346, y: 139.97598}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1311929973
@@ -2276,7 +2276,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: e28275e1c46140b4e9e2b1b9b510a79d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
