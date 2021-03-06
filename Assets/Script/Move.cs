@@ -6,6 +6,7 @@ public class Move : MonoBehaviour
 {
     private SpriteRenderer spriteRenderer;
     private int lastDirection;
+    private bool up, down, left, right;
     [SerializeField] 
     float speed = 3.0f;
     [SerializeField]
@@ -20,56 +21,69 @@ public class Move : MonoBehaviour
     // Update is called once per frame
     void Update()
     { 
-        Vector3 pos = transform.position;
- 
-         if (Input.GetKey("w") && !Input.GetKey("a") && !Input.GetKey("d"))  {
-             pos.y += speed * Time.deltaTime;
-             RotateSprite(0);
+        if(Input.GetKeyDown("w")){
+            up = true;
+            left = false;
+            right = false;
+            down = false;
+
+            spriteRenderer.sprite = spriteUp;
         }
-         if (Input.GetKey ("s") && !Input.GetKey("a") && !Input.GetKey("d")) {
-             pos.y -= speed * Time.deltaTime;
-             RotateSprite(1);
+        if(Input.GetKeyDown("a")){
+            left = true;
+            up = false;
+            down = false;
+            right = false;
+
+            spriteRenderer.sprite = spriteLeft;
+            spriteRenderer.flipX = false;
         }
-         if (Input.GetKey ("d") && !Input.GetKey("w") && !Input.GetKey("s")) {
-             pos.x += speed * Time.deltaTime;
-             RotateSprite(2);
+        if(Input.GetKeyDown("s")){
+            down = true;
+            left = false;
+            up = false;
+            right = false;
+
+            spriteRenderer.sprite = spriteDown;
         }
-         if (Input.GetKey ("a") && !Input.GetKey("w") && !Input.GetKey("s")) {
-             pos.x -= speed * Time.deltaTime;
-             RotateSprite(3);
-         }
-         transform.position = pos;
+        if(Input.GetKeyDown("d")){
+            right = true;
+            left = false;
+            down = false;
+            up = false;
+
+            spriteRenderer.sprite = spriteLeft;
+            spriteRenderer.flipX = true;
+        }
+
+        if(Input.GetKeyUp("w")){
+            up = false;
+        }
+        if(Input.GetKeyUp("a")){
+            left = false;
+        }
+        if(Input.GetKeyUp("s")){
+            down = false;
+        }
+        if(Input.GetKeyUp("d")){
+            right = false;
+        }
+
+        MoveAnkka();
     }
 
-    void RotateSprite(int newDirection)
-    {
-        if(lastDirection == newDirection)
-        {
-            return;
-        } 
-        else
-        {
-            switch (newDirection)
-            {
-                //cases: 0 = up, 1 = down, 2 = right, 3 = left
-                case 0:
-                    spriteRenderer.sprite = spriteUp;
-                    break;
-                case 1:
-                    spriteRenderer.sprite = spriteDown;
-                    break;
-                case 2:
-                    spriteRenderer.sprite = spriteLeft;
-                    spriteRenderer.flipX = true;
-                    break;
-                case 3:
-                    spriteRenderer.sprite = spriteLeft;
-                    spriteRenderer.flipX = false;
-                    break;
-            }
-            lastDirection = newDirection;
-            return;
+    void MoveAnkka(){
+        Vector3 pos = transform.position;
+        if(up){
+            pos.y += speed * Time.deltaTime;
+        } else if (left){
+            pos.x -= speed * Time.deltaTime;
+        } else if (down){
+            pos.y -= speed * Time.deltaTime;
+        } else if (right) {
+            pos.x += speed * Time.deltaTime;
         }
+        transform.position = pos;
     }
 }
 
