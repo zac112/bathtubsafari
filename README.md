@@ -9,3 +9,4 @@ Sokoban Readme
 - [ ] Viemäri-sprite
 - [ ] Vesipyörre-sprite valintakentän pallukoille
 - [ ] Valikkonappi in-game
+- [ ] Valintakenttään tasotunnisteet
