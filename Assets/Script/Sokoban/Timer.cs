@@ -32,7 +32,6 @@ public class Timer : MonoBehaviour
     }
 
     void FixedUpdate() {
-        //secondsSinceStart = Mathf.Round(Time.timeSinceLevelLoad);
         if (timerState) {
             minutes = Mathf.FloorToInt(secondsSinceStart / 60);
             seconds = Mathf.FloorToInt(secondsSinceStart % 60);
