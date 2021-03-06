@@ -30,7 +30,7 @@ public class Timer : MonoBehaviour
         minutes = Mathf.FloorToInt(secondsSinceStart / 60);
         seconds = Mathf.FloorToInt(secondsSinceStart % 60);
         
-        timer.text = minutes.ToString() + ":" + seconds.ToString();
+        timer.text = string.Format("{0:00}:{1:00}", minutes, seconds);
         print(timer.text);
     }
 }
