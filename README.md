@@ -5,8 +5,8 @@ Sokoban Readme
 ## To-Do Lista
 - [ ] Pullojen colliderit isommaksi / Pullo-spriten muutos neliön malliseksi
 - [ ] Tekstuurit kenttiin
-- [ ] Tulppa-sprite
-- [ ] Viemäri-sprite
+- [X] Tulppa-sprite
+- [X] Viemäri-sprite
 - [ ] Vesipyörre-sprite valintakentän pallukoille
-- [ ] Valikkonappi in-game
+- [X] Valikkonappi in-game
 - [ ] Valintakenttään tasotunnisteet
