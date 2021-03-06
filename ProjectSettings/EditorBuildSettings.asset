@@ -4,5 +4,14 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Paakartta.unity
+    guid: 3c9b6874eb658154b8b5ad8dadb2b94c
+  - enabled: 1
+    path: Assets/Scenes/LaatikonTyontely.unity
+    guid: 3a5ea7224cffe59428e37bac229cf2a3
+  - enabled: 1
+    path: Assets/Scenes/invaders.unity
+    guid: 1b84db9241a328644b829b3e9f8de0fc
   m_configObjects: {}
