@@ -698,6 +698,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1682317351}
   - component: {fileID: 1682317350}
+  - component: {fileID: 1682317352}
   m_Layer: 0
   m_Name: vesi
   m_TagString: Untagged
@@ -763,12 +764,25 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1682317349}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.5382931, y: 0.04169403, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 1.87, y: 0.17, z: 0}
+  m_LocalScale: {x: 0.86, y: 0.86, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1682317352
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1682317349}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c6eeaba89195be4c9da5843bb4bd613, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 15
 --- !u!1 &1717991053
 GameObject:
   m_ObjectHideFlags: 0
@@ -943,7 +957,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1917414567}
   - component: {fileID: 1917414566}
-  - component: {fileID: 1917414568}
   m_Layer: 0
   m_Name: Ankka
   m_TagString: Untagged
@@ -989,7 +1002,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: b589df20aadcb704db5d7ca9044c6183, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1008,26 +1021,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1917414565}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.07, y: -0.02, z: 0}
-  m_LocalScale: {x: 1.5563515, y: 1.5606313, z: 1}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalPosition: {x: 0.49999875, y: 1.499999, z: 0}
+  m_LocalScale: {x: 1.95, y: 1.95, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1917414568
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1917414565}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3c6eeaba89195be4c9da5843bb4bd613, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 15
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!1 &1981782043
 GameObject:
   m_ObjectHideFlags: 0
