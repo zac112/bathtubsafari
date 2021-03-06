@@ -2,30 +2,45 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class SolvedCheck : MonoBehaviour
 {
-    
+    static GameObject[] holes;
+    static bool filled;
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
-    public static void checkWin() {
-        bool hole1 = GameObject.Find("Hole1").GetComponent<PlugTile>().getIsPlugged();
-        bool hole2 = GameObject.Find("Hole2").GetComponent<PlugTile>().getIsPlugged();
-        bool hole3 = GameObject.Find("Hole3").GetComponent<PlugTile>().getIsPlugged();
+    public static void checkWin()
+    {
+        filled = true;
+        holes = GameObject.FindGameObjectsWithTag("Hole");
 
-        if (hole1 & hole2 & hole3) {
-            print("Epic");
+        foreach (GameObject hole in holes)
+        {
+            if (!hole.GetComponent<PlugTile>().getIsPlugged())
+            {
+                filled = false;
+            }
+            else
+            {
+                continue;
+            }
+        }
+
+        if (filled)
+        {
             Timer.TurnTimerOff();
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
     }
 }
