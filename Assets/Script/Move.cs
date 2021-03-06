@@ -70,7 +70,6 @@ public class Move : MonoBehaviour
         if(Input.GetKeyUp("d") || Input.GetKeyUp(KeyCode.RightArrow)){
             right = false;
         }
-
         
     }
 
@@ -79,7 +78,7 @@ public class Move : MonoBehaviour
     }
 
     void MoveAnkka(){
-        Vector3 pos = transform.position;
+        //Vector3 pos = transform.position;
         if(up){
             //pos.y += speed * Time.deltaTime;
             rb.MovePosition((Vector2) transform.position + (Vector2.up*speed * Time.deltaTime)); 
@@ -93,7 +92,7 @@ public class Move : MonoBehaviour
             //pos.x += speed * Time.deltaTime;
             rb.MovePosition((Vector2) transform.position + (Vector2.right*speed * Time.deltaTime)); 
         }
-        transform.position = pos;
+        //transform.position = pos;
     }
 }
 
