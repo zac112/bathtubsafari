@@ -21,7 +21,7 @@ public class Move : MonoBehaviour
     // Update is called once per frame
     void Update()
     { 
-        if(Input.GetKeyDown("w")){
+        if(Input.GetKeyDown("w") || Input.GetKeyDown(KeyCode.UpArrow)){
             up = true;
             left = false;
             right = false;
@@ -29,7 +29,7 @@ public class Move : MonoBehaviour
 
             spriteRenderer.sprite = spriteUp;
         }
-        if(Input.GetKeyDown("a")){
+        if(Input.GetKeyDown("a") || Input.GetKeyDown(KeyCode.LeftArrow)){
             left = true;
             up = false;
             down = false;
@@ -38,7 +38,7 @@ public class Move : MonoBehaviour
             spriteRenderer.sprite = spriteLeft;
             spriteRenderer.flipX = false;
         }
-        if(Input.GetKeyDown("s")){
+        if(Input.GetKeyDown("s") || Input.GetKeyDown(KeyCode.DownArrow)){
             down = true;
             left = false;
             up = false;
@@ -46,7 +46,7 @@ public class Move : MonoBehaviour
 
             spriteRenderer.sprite = spriteDown;
         }
-        if(Input.GetKeyDown("d")){
+        if(Input.GetKeyDown("d") || Input.GetKeyDown(KeyCode.RightArrow)){
             right = true;
             left = false;
             down = false;
@@ -56,16 +56,16 @@ public class Move : MonoBehaviour
             spriteRenderer.flipX = true;
         }
 
-        if(Input.GetKeyUp("w")){
+        if(Input.GetKeyUp("w") || Input.GetKeyUp(KeyCode.UpArrow)){
             up = false;
         }
-        if(Input.GetKeyUp("a")){
+        if(Input.GetKeyUp("a") || Input.GetKeyUp(KeyCode.LeftArrow)){
             left = false;
         }
-        if(Input.GetKeyUp("s")){
+        if(Input.GetKeyUp("s") || Input.GetKeyUp(KeyCode.DownArrow)){
             down = false;
         }
-        if(Input.GetKeyUp("d")){
+        if(Input.GetKeyUp("d") || Input.GetKeyUp(KeyCode.RightArrow)){
             right = false;
         }
 
