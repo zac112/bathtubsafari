@@ -52,6 +52,6 @@ public class Timer : MonoBehaviour
         while(true){
             yield return new WaitForSeconds(1f);
             secondsSinceStart++;
-   }
-}
+        }
+    }
 }
