@@ -12,6 +12,8 @@ public class Timer : MonoBehaviour
     int seconds;
     [SerializeField]
     Text timer;
+    static bool timerState = true;
+    float secondsSinceStart;
 
     // Start is called before the first frame update
     void Start()
@@ -26,11 +28,20 @@ public class Timer : MonoBehaviour
     }
 
     void FixedUpdate() {
-        float secondsSinceStart = Mathf.Round(Time.unscaledTime);
-        minutes = Mathf.FloorToInt(secondsSinceStart / 60);
-        seconds = Mathf.FloorToInt(secondsSinceStart % 60);
-        
-        timer.text = string.Format("{0:00}:{1:00}", minutes, seconds);
-        print(timer.text);
+        secondsSinceStart = Mathf.Round(Time.timeSinceLevelLoad);
+        if (timerState) {
+            minutes = Mathf.FloorToInt(secondsSinceStart / 60);
+            seconds = Mathf.FloorToInt(secondsSinceStart % 60);
+            
+            timer.text = string.Format("{0:00}:{1:00}", minutes, seconds);
+        }
+    }
+    
+    public static void TurnTimerOff() {
+        timerState = false;
+    }
+
+    public static void TurnTimerOn() {
+        timerState = true;
     }
 }

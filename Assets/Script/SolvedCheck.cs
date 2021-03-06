@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SolvedCheck : MonoBehaviour
 {
@@ -22,9 +23,9 @@ public class SolvedCheck : MonoBehaviour
         bool hole2 = GameObject.Find("Hole2").GetComponent<PlugTile>().getIsPlugged();
         bool hole3 = GameObject.Find("Hole3").GetComponent<PlugTile>().getIsPlugged();
 
-        print("Check win");
         if (hole1 & hole2 & hole3) {
             print("Epic");
+            Timer.TurnTimerOff();
         }
     }
 }
