@@ -28,7 +28,7 @@ public class Timer : MonoBehaviour
     }
 
     void Awake() {
-        StartCoroutine("Ajastin");
+        StartCoroutine("Counter");
     }
 
     void FixedUpdate() {
@@ -48,7 +48,7 @@ public class Timer : MonoBehaviour
         timerState = true;
     }
 
-    IEnumerator Ajastin(){
+    IEnumerator Counter(){
         while(true){
             yield return new WaitForSeconds(1f);
             secondsSinceStart++;
