@@ -8,6 +8,7 @@ public class SolvedCheck : MonoBehaviour
 {
     static GameObject[] holes;
     static bool filled;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -39,7 +40,7 @@ public class SolvedCheck : MonoBehaviour
 
         if (filled)
         {
-            Timer.TurnTimerOff();
+            Timer.Reset();
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
     }

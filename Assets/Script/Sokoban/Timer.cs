@@ -13,7 +13,7 @@ public class Timer : MonoBehaviour
     [SerializeField]
     Text timer;
     static bool timerState = true;
-    float secondsSinceStart;
+    static float secondsSinceStart;
 
     // Start is called before the first frame update
     void Start()
@@ -44,4 +44,9 @@ public class Timer : MonoBehaviour
     public static void TurnTimerOn() {
         timerState = true;
     }
+
+    public static void Reset() {
+        secondsSinceStart = 0;
+    }
+
 }
