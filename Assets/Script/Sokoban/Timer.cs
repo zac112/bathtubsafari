@@ -13,7 +13,7 @@ public class Timer : MonoBehaviour
     [SerializeField]
     Text timer;
     static bool timerState = true;
-    static float secondsSinceStart;
+    public static float secondsSinceStart;
 
     // Start is called before the first frame update
     void Start()
@@ -27,8 +27,12 @@ public class Timer : MonoBehaviour
         
     }
 
+    void Awake() {
+        StartCoroutine("Ajastin");
+    }
+
     void FixedUpdate() {
-        secondsSinceStart = Mathf.Round(Time.timeSinceLevelLoad);
+        //secondsSinceStart = Mathf.Round(Time.timeSinceLevelLoad);
         if (timerState) {
             minutes = Mathf.FloorToInt(secondsSinceStart / 60);
             seconds = Mathf.FloorToInt(secondsSinceStart % 60);
@@ -45,8 +49,10 @@ public class Timer : MonoBehaviour
         timerState = true;
     }
 
-    public static void Reset() {
-        secondsSinceStart = 0;
-    }
-
+    IEnumerator Ajastin(){
+        while(true){
+            yield return new WaitForSeconds(1f);
+            secondsSinceStart++;
+   }
+}
 }

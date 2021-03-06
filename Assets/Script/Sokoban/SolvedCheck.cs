@@ -39,8 +39,8 @@ public class SolvedCheck : MonoBehaviour
         }
 
         if (filled)
-        {
-            Timer.Reset();
+        {   
+            Timer.secondsSinceStart = 0;
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
     }
