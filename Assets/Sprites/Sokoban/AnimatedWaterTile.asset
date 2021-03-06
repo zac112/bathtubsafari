@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 0}
-  m_Name: New Animated Tile
+  m_Name: AnimatedWaterTile
   m_EditorClassIdentifier: Assembly-CSharp::AnimatedTile
   m_AnimatedSprites: []
   m_AnimationSpeed: 1
