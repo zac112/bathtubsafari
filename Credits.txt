@@ -1,6 +1,7 @@
 Koodarit:
 Erno Lokkila
 Teemu Kerkola
+Oskari Ojamaa
 
 Musiikki:
 Andrew Bowo
