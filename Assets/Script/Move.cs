@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Move : MonoBehaviour
 {   private SpriteRenderer spriteRenderer;
+    private Rigidbody2D rb;
     private int lastDirection;
     private bool up, down, left, right;
     [SerializeField] 
@@ -15,6 +16,7 @@ public class Move : MonoBehaviour
     void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
+        rb = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
@@ -69,19 +71,27 @@ public class Move : MonoBehaviour
             right = false;
         }
 
+        
+    }
+
+    void FixedUpdate() {
         MoveAnkka();
     }
 
     void MoveAnkka(){
         Vector3 pos = transform.position;
         if(up){
-            pos.y += speed * Time.deltaTime;
+            //pos.y += speed * Time.deltaTime;
+            rb.MovePosition((Vector2) transform.position + (Vector2.up*speed * Time.deltaTime)); 
         } else if (left){
-            pos.x -= speed * Time.deltaTime;
+            //pos.x -= speed * Time.deltaTime;
+            rb.MovePosition((Vector2) transform.position + (Vector2.left*speed * Time.deltaTime)); 
         } else if (down){
-            pos.y -= speed * Time.deltaTime;
+            //pos.y -= speed * Time.deltaTime;
+            rb.MovePosition((Vector2) transform.position + (Vector2.down*speed * Time.deltaTime)); 
         } else if (right) {
-            pos.x += speed * Time.deltaTime;
+            //pos.x += speed * Time.deltaTime;
+            rb.MovePosition((Vector2) transform.position + (Vector2.right*speed * Time.deltaTime)); 
         }
         transform.position = pos;
     }
