@@ -52,6 +52,7 @@ public class VirtahepoMove : MonoBehaviour
     void TurnBack()
     {
         startToEnd = !startToEnd;
+        transform. Rotate(new Vector3(0,180,0));
     }
 
     void OnCollisionEnter2D(Collision2D collision) {
