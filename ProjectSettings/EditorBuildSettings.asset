@@ -5,15 +5,6 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
-  - enabled: 1
-    path: Assets/Scenes/Ankkasokkelo.unity
-    guid: 7f78c50e3a3334fa7b18d65bb866f7e7
   - enabled: 1
     path: Assets/Scenes/invaders.unity
     guid: 1b84db9241a328644b829b3e9f8de0fc
@@ -23,9 +14,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SokobanTasot/Tutoriaali.unity
     guid: edabb78afb8f5f74b827b51dced0b9e3
-  - enabled: 1
-    path: Assets/Scenes/SokobanTasot/Taso1.unity
-    guid: 3a5ea7224cffe59428e37bac229cf2a3
   - enabled: 1
     path: Assets/Scenes/SokobanTasot/Taso3.unity
     guid: 4730b2909b1f9a846b38ce4f1baf9874
@@ -57,9 +45,9 @@ EditorBuildSettings:
     path: Assets/Scenes/SokobanTasot/Taso11.unity
     guid: ad6ddc116555a4b468495e42b6c91154
   - enabled: 1
-    path: Assets/Scenes/SokobanTasot/Taso10.unity
-    guid: c4d6dab77dcd10a46b72c15904f40f37
-  - enabled: 1
     path: Assets/Scenes/TESTI.unity
     guid: 8a7e15e445363834e90dbc949248ade9
+  - enabled: 1
+    path: Assets/Scenes/Paakartta.unity
+    guid: 1df915085a68c4595b14b4107354bacd
   m_configObjects: {}
