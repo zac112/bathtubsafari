@@ -9,6 +9,8 @@ TagManager:
   - InvadersPisara
   - Hole
   - TasoEntry
+  - Musiikki
+  - MenuMusiikki
   layers:
   - Default
   - TransparentFX
