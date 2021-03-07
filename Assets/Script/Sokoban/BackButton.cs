@@ -4,14 +4,15 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class LoadLevel : MonoBehaviour
+public class BackButton : MonoBehaviour
 {
     [SerializeField]
-    private int sceneIndex;
+    Button backButton;
     // Start is called before the first frame update
     void Start()
     {
-        
+        backButton = GameObject.Find("BackButton").GetComponent<Button>();
+        backButton.onClick.AddListener(GoBack);
     }
 
     // Update is called once per frame
@@ -19,11 +20,8 @@ public class LoadLevel : MonoBehaviour
     {
         
     }
-    void OnTriggerEnter2D(Collider2D collider) {
-        if(collider.tag == "Player") 
-        {
-            SceneManager.LoadScene(sceneIndex);
-        }
 
+    void GoBack() {
+        SceneManager.LoadScene("Paakartta");
     }
 }
