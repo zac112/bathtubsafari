@@ -9,18 +9,17 @@ public class Musiikki : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {   
-        musiikkiObjektit = GameObject.FindGameObjectsWithTag("Musiikki");
-        if(musiikkiObjektit.Length > 1){
-            Destroy(gameObject);
-            return;
+        string tag = gameObject.tag;
+        if(tag.Equals("Musiikki"))
+        {
+            //siirrytään menusta tasoon
+            Korvaa("MenuMusiikki", "Musiikki");
+        } 
+        else if (tag.Equals("MenuMusiikki"))
+        {   
+            //siirrytään tasosta menuun
+            Korvaa("Musiikki", "MenuMusiikki");
         }
-        if(gameObject.tag.Equals("MenuMusiikki")){
-            Destroy(GameObject.FindGameObjectWithTag("Musiikki"));
-            return;
-        }
-        DontDestroyOnLoad(transform.gameObject);
-        audioSource = GetComponent<AudioSource>();
-        PlayMusic();
     }
 
     void awake()
@@ -28,15 +27,16 @@ public class Musiikki : MonoBehaviour
 
     }
 
-    public void PlayMusic()
-    {
-        if (audioSource.isPlaying) return;
-        audioSource.Play();
-    }
- 
-    public void StopMusic()
-    {
-        audioSource.Stop();
+    void Korvaa(string poistettava, string haluttu){
+
+        Destroy(GameObject.FindGameObjectWithTag(poistettava));
+        musiikkiObjektit = GameObject.FindGameObjectsWithTag(haluttu);
+        if(musiikkiObjektit.Length > 1){
+            Destroy(gameObject);
+            return;
+        }
+        DontDestroyOnLoad(transform.gameObject);
+        return;
     }
 
     // Update is called once per frame
