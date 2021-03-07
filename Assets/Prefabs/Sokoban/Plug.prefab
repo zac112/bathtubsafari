@@ -143,5 +143,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7156579b6b5658499b07f189f9d8b77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  plugDistance: 0.1
+  plugDistance: 0.05
   unPlugDistance: 0.32

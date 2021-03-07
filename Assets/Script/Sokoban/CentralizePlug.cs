@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class CentralizePlug : MonoBehaviour
 {
-    [SerializeField] float plugDistance = 0.1f;
-    [SerializeField] float unPlugDistance = 0.2f;
+    [SerializeField] float plugDistance; // Etäisyys, jonka päästä tulppa siirtyy reijän keskelle
+    [SerializeField] float unPlugDistance; // Etäisyys, jonka päähän tulppa on siirrettävä, jotta tulppa voi siirtyä reijän keskelle
+
     private bool isPlugged = false;
     void Start()
     {
