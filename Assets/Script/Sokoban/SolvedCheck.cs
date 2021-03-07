@@ -48,8 +48,9 @@ public class SolvedCheck : MonoBehaviour
             } else {
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
             }
+
+            GameObject go = GameObject.Find("GameManager");
+            if(go != null) go.GetComponent<GameManager>().LisaaPiste();
         }
-        GameObject go = GameObject.Find("GameManager");
-        if(go != null) go.GetComponent<GameManager>().LisaaPiste();
     }
 }
