@@ -103,7 +103,8 @@ public class Liike : MonoBehaviour
         SceneManager.LoadScene("Paakartta");
 
         GameObject go = GameObject.Find("GameManager");
-        if(go != null) go.GetComponent<GameManager>().LisaaPiste();
+        if (go != null) { go.GetComponent<GameManager>().LisaaPiste();  }
+        else print("Manager was null");
         
     }
 

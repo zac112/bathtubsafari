@@ -59,4 +59,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/invaders.unity
     guid: 1b84db9241a328644b829b3e9f8de0fc
+  - enabled: 1
+    path: Assets/Scenes/outro.unity
+    guid: 78216697f012b2e4693b6d31b5196f2c
   m_configObjects: {}
