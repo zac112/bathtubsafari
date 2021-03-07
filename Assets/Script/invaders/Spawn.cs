@@ -25,7 +25,9 @@ public class Spawn : MonoBehaviour
     IEnumerator CreateDrop() {
         GameObject go = GameObject.Instantiate(pisara, transform.position, transform.rotation);
         go.GetComponent<Pisara>().enabled = false;
+        go.GetComponent<CapsuleCollider2D>().enabled = false;
         go.transform.localScale = Vector3.zero;
+        Liike.pisarat.Add(go);
         float startTime = Time.time;        
         float duration = 2f;
         float endTime = startTime + duration;
@@ -38,5 +40,6 @@ public class Spawn : MonoBehaviour
             yield return null;
         }
         go.GetComponent<Pisara>().enabled = true;
+        go.GetComponent<CapsuleCollider2D>().enabled = true;
     }
 }

@@ -10,6 +10,10 @@ public class Pisara : MonoBehaviour
     [SerializeField]
     GameObject[] reunat;
 
+    float multiplier = -1f;
+
+    public static bool speedDebuff = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -22,18 +26,38 @@ public class Pisara : MonoBehaviour
     }
 
     public void AddOffset() {
-        transform.position += transform.up * -Yoffset;
+        StartCoroutine("MoveDown");
+        //transform.position += transform.up * -Yoffset;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        float multiplier = -1f;
-        if (!left) {
-            multiplier = 1f;
+    private IEnumerator MoveDown() {
+        float start = multiplier;
+        float end = -multiplier;
+        float duration = 1f;
+
+        float startTime = Time.time;
+        float endTime = Time.time+duration;
+
+        float startY = transform.position.y;
+        float endY = transform.position.y-Yoffset;
+
+        while (Time.time - startTime < duration) {
+            multiplier = Mathf.Lerp(start, end, (Time.time-startTime) / duration);
+            transform.position = new Vector3(transform.position.x, Mathf.Lerp(startY, endY, (Time.time - startTime) / duration), transform.position.z);
+            yield return null;
         }
 
-        transform.position += transform.right * multiplier*Time.deltaTime;
+
+    }
+    // Update is called once per frame
+    void Update() {
+        if (speedDebuff)
+        {
+            transform.position += transform.right * multiplier/2 * Time.deltaTime;
+        }
+        else {
+            transform.position += transform.right * multiplier * Time.deltaTime;
+        }
     }
 
 }
