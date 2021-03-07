@@ -5385,6 +5385,9 @@ MonoBehaviour:
   points:
   - {fileID: 1776431663}
   - {fileID: 1383485044}
+  id: 0
+  pisteet: 0
+  voittopisteet: 1
 --- !u!4 &1008085845
 Transform:
   m_ObjectHideFlags: 0

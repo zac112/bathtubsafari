@@ -101,8 +101,9 @@ public class Liike : MonoBehaviour
         Destroy(GameObject.Find("Spawn point"));
         yield return NaytaVoittoteksti();
         SceneManager.LoadScene("Paakartta");
+
         GameObject go = GameObject.Find("GameManager");
-        //if(go != null) go.GetComponent<GameManager>().LisaaPiste();
+        if(go != null) go.GetComponent<GameManager>().LisaaPiste();
         
     }
 

@@ -8,10 +8,27 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     GameObject[] points;
 
+    static int counter;
+    public int id;
+
+    [SerializeField]
+    int pisteet;
+
+    [SerializeField]
+    int voittopisteet;
+
     // Start is called before the first frame update
     void Start()
     {
-        gameObject.hideFlags = HideFlags.DontSave;
+        id = counter;
+        counter++;
+        DontDestroyOnLoad(gameObject);
+
+        foreach (GameObject go in GameObject.FindGameObjectsWithTag("Respawn")) {
+            if (go.GetComponent<GameManager>().id < this.id) {
+                Destroy(gameObject);
+            }
+        }
     }
 
     public void Complete(Scene s) {
@@ -20,6 +37,13 @@ public class GameManager : MonoBehaviour
             if (poi.SceneIndex() == s.buildIndex){
                 poi.SetPointVisible(true);
             }
+        }
+    }
+
+    public void LisaaPiste() {
+        pisteet++;
+        if (pisteet >= voittopisteet) {
+            SceneManager.LoadScene("Outro");
         }
     }
 
