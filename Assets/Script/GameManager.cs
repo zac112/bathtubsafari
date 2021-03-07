@@ -19,7 +19,7 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        pisteet = 0;
+        
         voittopisteet = 7;
         id = counter;
         counter++;

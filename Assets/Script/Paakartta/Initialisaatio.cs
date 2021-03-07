@@ -8,12 +8,14 @@ public class Initialisaatio : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Destroy(GameObject.Find("GameManager"));
-        GameObject go = new GameObject();
-        go.name = "GameManager";
-        GameManager g = go.AddComponent<GameManager>();
-        DontDestroyOnLoad(go);
-        g.voittopisteet = 7;
+        if (GameObject.Find("GameManager") == null) { 
+            //Destroy(GameObject.Find("GameManager"));
+            GameObject go = new GameObject();
+            go.name = "GameManager";
+            GameManager g = go.AddComponent<GameManager>();
+            DontDestroyOnLoad(go);
+            g.voittopisteet = 7; 
+        }
 
     }
 
