@@ -73,7 +73,7 @@ public class Move : MonoBehaviour
             right = false;
         }
 
-        if(Input.GetKey(KeyCode.Space)) {
+        if(Input.GetKeyDown(KeyCode.Space)) {
             audioSource.Play();
         }
         
