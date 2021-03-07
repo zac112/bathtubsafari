@@ -144,4 +144,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   plugDistance: 0.05
-  unPlugDistance: 0.32
+  unPlugDistance: 0.06
