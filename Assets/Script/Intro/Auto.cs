@@ -9,6 +9,8 @@ public class Auto : MonoBehaviour
     GameObject[] waypoints;
     [SerializeField] 
     GameObject next;
+    [SerializeField]
+    float delay;
 
     // Start is called before the first frame update
     void Start()
@@ -17,7 +19,7 @@ public class Auto : MonoBehaviour
     }
 
     IEnumerator Intro() {
-
+        yield return new WaitForSeconds(delay);
         yield return GoToWaypoint(waypoints[0]);
         yield return new WaitForSeconds(2);
         yield return GoToWaypoint(waypoints[1]);
