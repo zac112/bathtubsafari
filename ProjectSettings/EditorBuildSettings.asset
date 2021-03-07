@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/Scenes/invaders.unity
     guid: 1b84db9241a328644b829b3e9f8de0fc
   - enabled: 1
+    path: Assets/Scenes/SokobanTasot/Tutoriaali.unity
+    guid: edabb78afb8f5f74b827b51dced0b9e3
+  - enabled: 1
     path: Assets/Scenes/SokobanTasot/Taso1.unity
     guid: 3a5ea7224cffe59428e37bac229cf2a3
   - enabled: 1
