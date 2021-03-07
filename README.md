@@ -6,6 +6,5 @@ Sokoban Readme
 - [ ] Tekstuurit kenttiin
 - [X] Tulppa-sprite
 - [X] Viemäri-sprite
-- [ ] Vesipyörre-sprite valintakentän pallukoille
 - [X] Valikkonappi in-game
-- [ ] Valintakenttään tasotunnisteet
+- [X] Valintakenttään tasotunnisteet
