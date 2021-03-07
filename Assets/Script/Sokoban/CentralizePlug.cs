@@ -7,7 +7,7 @@ public class CentralizePlug : MonoBehaviour
     [SerializeField] float plugDistance; // Etäisyys, jonka päästä tulppa siirtyy reijän keskelle
     [SerializeField] float unPlugDistance; // Etäisyys, jonka päähän tulppa on siirrettävä, jotta tulppa voi siirtyä reijän keskelle
     [SerializeField] AudioSource audioSource;
-    private bool isPlugged = false;
+    private bool plugged = false;
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
@@ -18,16 +18,16 @@ public class CentralizePlug : MonoBehaviour
         GameObject nearest = FindNearestHole();
         float distance = DistanceToNearest();
         
-        if (distance < plugDistance && !isPlugged)
+        if (distance < plugDistance && !plugged)
         {
             transform.position = nearest.transform.position;
             audioSource.Play();
-            isPlugged = true;
+            plugged = true;
         }
 
         if (distance > unPlugDistance)
         {
-            isPlugged = false;
+            plugged = false;
         }
        
         
