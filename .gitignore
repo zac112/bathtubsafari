@@ -27,6 +27,7 @@ sysinfo.txt
 *.userprefs
 *.pidb
 .DS_Store
+.vscode
 
 ###
 # OS generated

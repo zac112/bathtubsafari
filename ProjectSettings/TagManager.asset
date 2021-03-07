@@ -4,8 +4,13 @@
 TagManager:
   serializedVersion: 2
   tags:
+  - PlugTile
   - InvadersReuna
   - InvadersPisara
+  - Hole
+  - TasoEntry
+  - Musiikki
+  - MenuMusiikki
   layers:
   - Default
   - TransparentFX
