@@ -42,12 +42,14 @@ public class SolvedCheck : MonoBehaviour
         {   
             Timer.secondsSinceStart = 0;
             LevelClearCheck.isSolved();
-            if(SceneManager.GetActiveScene().buildIndex + 1 > SceneManager.sceneCountInBuildSettings - 1 || 
+            if(SceneManager.GetActiveScene().buildIndex == 15 || 
             SceneManager.GetActiveScene().Equals(SceneManager.GetSceneByName("Tutoriaali"))) {
                 SceneManager.LoadScene("TasoMenu");
             } else {
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
             }
         }
+        GameObject go = GameObject.Find("GameManager");
+        if(go != null) go.GetComponent<GameManager>().LisaaPiste();
     }
 }
