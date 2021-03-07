@@ -836,6 +836,11 @@ PrefabInstance:
       propertyPath: m_Text
       value: Level 5
       objectReference: {fileID: 0}
+    - target: {fileID: 5148989973937264642, guid: d8f0d35a39d94ab47b30400286b71cc6,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6438204206981648744, guid: d8f0d35a39d94ab47b30400286b71cc6,
         type: 3}
       propertyPath: m_Pivot.x
