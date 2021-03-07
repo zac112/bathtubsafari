@@ -12,12 +12,12 @@ GameObject:
   - component: {fileID: 6564124715489010154}
   - component: {fileID: 204037090418408855}
   m_Layer: 0
-  m_Name: nuoli (1)
+  m_Name: nuoliPrefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &504870822732724880
 Transform:
   m_ObjectHideFlags: 0
@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 6260700338477295807}
   m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
   m_LocalPosition: {x: -3.02, y: 0.15, z: -2}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -95,3 +95,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   aikaLiikkeenValissa: 1
+  liike: 0.5

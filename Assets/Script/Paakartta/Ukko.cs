@@ -10,6 +10,12 @@ public class Ukko : MonoBehaviour
     GameObject startPoint;
     [SerializeField]
     GameObject huutomerkki;
+    [SerializeField]
+    GameObject nuoli;
+    [SerializeField]
+    GameObject nuoli2;
+    [SerializeField]
+    GameObject nuoli3;
 
     // Start is called before the first frame update
     void Start()
@@ -55,7 +61,10 @@ public class Ukko : MonoBehaviour
             huutomerkki.GetComponent<SpriteRenderer>().color = Color.Lerp(Color.clear, Color.white, (Time.time - startTime) / duration);
             yield return null;
         }
-
-
+        yield return new WaitForSeconds(6);
+        huutomerkki.SetActive(false);
+        nuoli.SetActive(true);
+        nuoli2.SetActive(true);
+        nuoli3.SetActive(true);
     }
 }
