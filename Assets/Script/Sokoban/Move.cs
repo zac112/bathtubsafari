@@ -11,10 +11,12 @@ public class Move : MonoBehaviour
     float speed = 3.0f;
     [SerializeField]
     Sprite spriteUp, spriteDown, spriteLeft;
+    [SerializeField] AudioSource audioSource;
 
     // Start is called before the first frame update
     void Start()
     {
+        audioSource = GetComponent<AudioSource>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         rb = GetComponent<Rigidbody2D>();
     }
@@ -69,6 +71,10 @@ public class Move : MonoBehaviour
         }
         if(Input.GetKeyUp("d") || Input.GetKeyUp(KeyCode.RightArrow)){
             right = false;
+        }
+
+        if(Input.GetKey(KeyCode.Space)) {
+            audioSource.Play();
         }
         
     }
