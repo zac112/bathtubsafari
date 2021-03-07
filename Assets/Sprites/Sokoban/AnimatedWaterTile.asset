@@ -21,5 +21,5 @@ MonoBehaviour:
   - {fileID: -8161741665806181574, guid: 44cbe4a5db0c86042a1a708318768a49, type: 3}
   - {fileID: -3510916345274859429, guid: 44cbe4a5db0c86042a1a708318768a49, type: 3}
   - {fileID: -1967584788855476772, guid: 44cbe4a5db0c86042a1a708318768a49, type: 3}
-  m_AnimationSpeed: 1
+  m_AnimationSpeed: 2
   m_AnimationStartTime: 0

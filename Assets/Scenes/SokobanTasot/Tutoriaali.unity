@@ -1571,6 +1571,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Musiikki
       objectReference: {fileID: 0}
+    - target: {fileID: 821289095795710073, guid: af282af4df741a84da9fbe328ad2c29d,
+        type: 3}
+      propertyPath: m_TagString
+      value: MenuMusiikki
+      objectReference: {fileID: 0}
+    - target: {fileID: 821289095795710078, guid: af282af4df741a84da9fbe328ad2c29d,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: e613300de53930d47894e84bb7ec1bed, type: 3}
     - target: {fileID: 821289095795710079, guid: af282af4df741a84da9fbe328ad2c29d,
         type: 3}
       propertyPath: m_RootOrder
