@@ -13,13 +13,14 @@ public class GameManager : MonoBehaviour
 
     [SerializeField]
     int pisteet;
-
-    [SerializeField]
-    int voittopisteet;
+        
+    public int voittopisteet = 3;
 
     // Start is called before the first frame update
     void Start()
     {
+        pisteet = 0;
+        voittopisteet = 7;
         id = counter;
         counter++;
         DontDestroyOnLoad(gameObject);
@@ -42,8 +43,9 @@ public class GameManager : MonoBehaviour
 
     public void LisaaPiste() {
         pisteet++;
+        print(pisteet+" "+voittopisteet);
         if (pisteet >= voittopisteet) {
-            SceneManager.LoadScene("Outro");
+            SceneManager.LoadScene("outro");
         }
     }
 
