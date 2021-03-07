@@ -6,11 +6,11 @@ public class CentralizePlug : MonoBehaviour
 {
     [SerializeField] float plugDistance; // Etäisyys, jonka päästä tulppa siirtyy reijän keskelle
     [SerializeField] float unPlugDistance; // Etäisyys, jonka päähän tulppa on siirrettävä, jotta tulppa voi siirtyä reijän keskelle
-
+    [SerializeField] AudioSource audioSource;
     private bool isPlugged = false;
     void Start()
     {
-        
+        audioSource = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -21,6 +21,7 @@ public class CentralizePlug : MonoBehaviour
         if (distance < plugDistance && !isPlugged)
         {
             transform.position = nearest.transform.position;
+            audioSource.Play();
             isPlugged = true;
         }
 
