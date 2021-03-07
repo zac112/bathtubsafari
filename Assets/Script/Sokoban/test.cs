@@ -10,7 +10,8 @@ public class test : MonoBehaviour
     }
     private static Dictionary<int,bool> lapaistytTasot = new Dictionary<int, bool>();
     public static void isSolved(){
-        lapaistytTasot.Add((SceneManager.GetActiveScene().buildIndex-3),true);
+        if(!(SceneManager.GetActiveScene().buildIndex==3))
+            lapaistytTasot.Add((SceneManager.GetActiveScene().buildIndex-3),true);
     }
     public static void muutaVari(){
         foreach(var i in lapaistytTasot){
