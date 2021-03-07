@@ -11,6 +11,7 @@ TagManager:
   - TasoEntry
   - Musiikki
   - MenuMusiikki
+  - Metaball_liquid
   layers:
   - Default
   - TransparentFX

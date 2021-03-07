@@ -1,5 +1,9 @@
 fileFormatVersion: 2
-guid: f37c4e79ae9821f44b4fbbdac9fad693
+<<<<<<< HEAD:Assets/Sprites/Mainmenu.png.meta
+guid: d3ad6c67560974b2da92f0eb801f4e0e
+=======
+guid: 61f6a6ee295c8d64aa08516abbb03c57
+>>>>>>> eaa374e1af5139024c295445fd1af93f3ca332af:Assets/Sprites/Karhu_64x128px.png.meta
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
