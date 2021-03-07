@@ -16,10 +16,10 @@ public class Ammus : MonoBehaviour
         this.pisarat = pisarat;
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    void OnTriggerEnter2D(Collider2D collider) 
     {
-        pisarat.Remove(collision.gameObject);
+        pisarat.Remove(collider.gameObject);
         Destroy(gameObject);
-        Destroy(collision.gameObject);
+        Destroy(collider.gameObject);
     }
 }
