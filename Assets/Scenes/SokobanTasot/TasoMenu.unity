@@ -533,6 +533,85 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 807a3e7facf0412408f8368ac96cc670, type: 3}
+--- !u!1001 &469606097
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1940124051}
+    m_Modifications:
+    - target: {fileID: 388433563481590428, guid: 807a3e7facf0412408f8368ac96cc670,
+        type: 3}
+      propertyPath: sceneIndex
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 4517209365619425428, guid: 807a3e7facf0412408f8368ac96cc670,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 4517209365619425428, guid: 807a3e7facf0412408f8368ac96cc670,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.32
+      objectReference: {fileID: 0}
+    - target: {fileID: 4517209365619425428, guid: 807a3e7facf0412408f8368ac96cc670,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.88
+      objectReference: {fileID: 0}
+    - target: {fileID: 4517209365619425428, guid: 807a3e7facf0412408f8368ac96cc670,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4517209365619425428, guid: 807a3e7facf0412408f8368ac96cc670,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4517209365619425428, guid: 807a3e7facf0412408f8368ac96cc670,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4517209365619425428, guid: 807a3e7facf0412408f8368ac96cc670,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4517209365619425428, guid: 807a3e7facf0412408f8368ac96cc670,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4517209365619425428, guid: 807a3e7facf0412408f8368ac96cc670,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4517209365619425428, guid: 807a3e7facf0412408f8368ac96cc670,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4517209365619425428, guid: 807a3e7facf0412408f8368ac96cc670,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6046432985075429173, guid: 807a3e7facf0412408f8368ac96cc670,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7738506216718348451, guid: 807a3e7facf0412408f8368ac96cc670,
+        type: 3}
+      propertyPath: m_Name
+      value: TasoEntry8
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 807a3e7facf0412408f8368ac96cc670, type: 3}
 --- !u!1 &683097639
 GameObject:
   m_ObjectHideFlags: 0
@@ -1075,7 +1154,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 0
-      m_TileSpriteIndex: 0
+      m_TileSpriteIndex: 2
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -1507,12 +1586,12 @@ Tilemap:
   - m_RefCount: 46
     m_Data: {fileID: 11400000, guid: 3ec32d59fa9adc74b98493a497f0bf42, type: 2}
   m_TileSpriteArray:
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 1
     m_Data: {fileID: 21300000, guid: cb2f190db87664b45b0b9025d5a071f4, type: 3}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
   - m_RefCount: 1
     m_Data: {fileID: -574117713378830742, guid: 4be66c5ab429edc429f47e6480c34022,
       type: 3}
@@ -2757,6 +2836,12 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!4 &1821925177 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4517209365619425428, guid: 807a3e7facf0412408f8368ac96cc670,
+    type: 3}
+  m_PrefabInstance: {fileID: 469606097}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1926293235
 GameObject:
   m_ObjectHideFlags: 0
@@ -2992,6 +3077,7 @@ Transform:
   - {fileID: 260208151}
   - {fileID: 97534910}
   - {fileID: 1117001455}
+  - {fileID: 1821925177}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
