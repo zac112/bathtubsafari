@@ -40,6 +40,7 @@ public class Spawn : MonoBehaviour
             yield return null;
         }
         go.GetComponent<Pisara>().enabled = true;
+        go.GetComponent<Pisara>().moving = true;
         go.GetComponent<CapsuleCollider2D>().enabled = true;
     }
 }

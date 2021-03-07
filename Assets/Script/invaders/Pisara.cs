@@ -12,12 +12,38 @@ public class Pisara : MonoBehaviour
 
     float multiplier = -1f;
 
+    public bool moving = false;
     public static bool speedDebuff = false;
+
+    static bool alku = true;
 
     // Start is called before the first frame update
     void Start()
     {
         reunat = GameObject.FindGameObjectsWithTag("InvadersReuna");
+        if (alku)
+        {
+            Invoke("Alku", 8f);
+            transform.localScale = Vector3.zero;
+        }
+        
+    }
+
+    void Alku() {
+        StartCoroutine("Kasva");
+    }
+
+    IEnumerator Kasva() {
+        float duration = 1f;
+        float startTime = Time.time;
+        while (Time.time < startTime + duration) {
+            transform.localScale = Vector3.Lerp(Vector3.zero,Vector3.one*2,(Time.time-startTime)/duration);
+            yield return null;
+        }
+        transform.localScale = Vector3.one * 2;
+        moving = true;
+        alku = false;
+
     }
 
     public void ChangeDirection(bool left)
@@ -51,6 +77,7 @@ public class Pisara : MonoBehaviour
     }
     // Update is called once per frame
     void Update() {
+        if (!moving) { return; }
         if (speedDebuff)
         {
             transform.position += transform.right * multiplier/2 * Time.deltaTime;

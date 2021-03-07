@@ -17,7 +17,7 @@ public class Liike : MonoBehaviour
     float speed = 1f;
 
     bool voiAmpua = true;
-
+    bool liikkeessa = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -28,26 +28,42 @@ public class Liike : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        if (Input.anyKey)
+            liikkeessa = true;
+        else { 
+            liikkeessa = false;
+            GetComponent<AudioSource>().Pause();
+        }
+
         if (Input.GetKey(KeyCode.A)) {
             transform.position += -1*transform.right*Time.deltaTime * speed;
+            liikkeessa = true;
         }
         if (Input.GetKey(KeyCode.D))
         {
             transform.position +=  transform.right * Time.deltaTime * speed;
+            liikkeessa = true;
         }
         
         
         if (Input.GetKey(KeyCode.W))
         {
             transform.position +=  transform.up * Time.deltaTime * speed;
+            liikkeessa = true;
         }
         if (Input.GetKey(KeyCode.S))
         {
             transform.position +=  -1 * transform.up * Time.deltaTime * speed;
+            liikkeessa = true;
         }
 
         if (Input.GetKeyDown(KeyCode.Space)) {
             Ammu();
+        }
+
+        if (liikkeessa && !GetComponent<AudioSource>().isPlaying) {
+            GetComponent<AudioSource>().Play();
         }
     }
 
