@@ -16,14 +16,17 @@ public class WhichLevel : MonoBehaviour
         levelText = GameObject.Find("LevelText").GetComponent<Text>();
         string activeScene = SceneManager.GetActiveScene().name;
         string levelNumber = "";
-        foreach(char c in activeScene) {
-            string s = ""+c;
-            if (rx.IsMatch(s))
-            {
-                levelNumber += s;
+        if(activeScene.Equals("Tutoriaali")) {
+            levelNumber = "Tutorial";
+        } else {
+            foreach(char c in activeScene) {
+                string s = ""+c;
+                if (rx.IsMatch(s))
+                {
+                    levelNumber += s;
+                }
             }
         }
-        
         levelText.text = "Level " + levelNumber;
     }
 
