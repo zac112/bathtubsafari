@@ -36,6 +36,7 @@ public class Spawn : MonoBehaviour
             float progress = (Time.time - startTime) / duration;
             Vector3 scale = Vector3.one*2 * progress;
             go.transform.localScale = scale;
+            go.transform.position -= transform.up * Time.deltaTime/2;
 
             yield return null;
         }

@@ -18,6 +18,8 @@ public class Liike : MonoBehaviour
 
     bool voiAmpua = true;
     bool liikkeessa = false;
+    [SerializeField]
+    GameObject voitto;
     // Start is called before the first frame update
     void Start()
     {
@@ -62,6 +64,9 @@ public class Liike : MonoBehaviour
             Ammu();
         }
 
+        if (Input.GetKeyDown(KeyCode.U))
+            pisarat.Clear();
+
         if (liikkeessa && !GetComponent<AudioSource>().isPlaying) {
             GetComponent<AudioSource>().Play();
         }
@@ -93,6 +98,24 @@ public class Liike : MonoBehaviour
 
     IEnumerator LopetaPeli() {
         yield return new WaitUntil(() => pisarat.Count == 0);
+        Destroy(GameObject.Find("Spawn point"));
+        yield return NaytaVoittoteksti();
+
         SceneManager.LoadScene("Paakartta");
+    }
+
+    private IEnumerator NaytaVoittoteksti()
+    {        
+        voitto.transform.localScale = Vector3.zero;
+        voitto.SetActive(true);
+
+        float startTime = Time.time;
+        float duration = 5f;
+        while (Time.time < startTime + duration) {
+            voitto.transform.localScale = Vector3.Lerp(Vector3.zero, Vector3.one * 2, (Time.time - startTime) / duration);
+            yield return null;
+        }
+        yield return new WaitForSeconds(5);
+
     }
 }

@@ -23,6 +23,10 @@ public class Ukko : MonoBehaviour
         transform.position = startPoint.transform.position;
         transform.rotation = startPoint.transform.rotation;
         StartCoroutine("EntryAnimation");
+        GameObject m = GameObject.Find("Musiikki");
+        if (m != null) {
+            Destroy(m);
+         }
     }
 
     IEnumerator EntryAnimation() {
