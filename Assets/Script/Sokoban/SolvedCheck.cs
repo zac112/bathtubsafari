@@ -41,7 +41,7 @@ public class SolvedCheck : MonoBehaviour
         if (filled)
         {   
             Timer.secondsSinceStart = 0;
-            test.isSolved();
+            LevelClearCheck.isSolved();
             if(SceneManager.GetActiveScene().buildIndex + 1 > SceneManager.sceneCountInBuildSettings - 1 || 
             SceneManager.GetActiveScene().Equals(SceneManager.GetSceneByName("Tutoriaali"))) {
                 SceneManager.LoadScene("TasoMenu");

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-public class test : MonoBehaviour
+public class LevelClearCheck : MonoBehaviour
 {
     void Start()
     {
