@@ -39,7 +39,7 @@ public class VirtahepoMove : MonoBehaviour
         }
         else
         {
-            transform.position = Vector3.MoveTowards(transform.position, startVector, Time.deltaTime * 3.0f);
+            transform.position = Vector3.MoveTowards(transform.position, startVector, Time.deltaTime * speed);
 
             if (transform.position == startVector)
             {
