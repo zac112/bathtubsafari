@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class LevelSelect : MonoBehaviour
 {
-
+    [SerializeField]
     Button levelSelectButton;
     // Start is called before the first frame update
     void Start()
