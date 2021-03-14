@@ -296,6 +296,7 @@ MonoBehaviour:
   - {fileID: 1269620642}
   - {fileID: 1209924224}
   next: {fileID: 2107714095}
+  delay: 0
 --- !u!212 &260800348
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -746,3 +747,4 @@ MonoBehaviour:
   - {fileID: 132520171}
   - {fileID: 212423643}
   next: {fileID: 1930689152}
+  delay: 0

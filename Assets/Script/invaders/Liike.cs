@@ -109,7 +109,8 @@ public class Liike : MonoBehaviour
     }
 
     private IEnumerator NaytaVoittoteksti()
-    {        
+    {
+        Pisara.alku = true;
         voitto.transform.localScale = Vector3.zero;
         voitto.SetActive(true);
 

@@ -13,40 +13,63 @@ public class GameManager : MonoBehaviour
 
     [SerializeField]
     int pisteet;
-        
-    public int voittopisteet = 3;
 
+    public int voittopisteet = 7;
+
+    public bool first = true;
+
+    private void Awake()
+    {
+        first = true;
+    }
     // Start is called before the first frame update
     void Start()
     {
-        
+
         voittopisteet = 7;
         id = counter;
         counter++;
         DontDestroyOnLoad(gameObject);
 
-        foreach (GameObject go in GameObject.FindGameObjectsWithTag("Respawn")) {
-            if (go.GetComponent<GameManager>().id < this.id) {
+        foreach (GameObject go in GameObject.FindGameObjectsWithTag("Respawn"))
+        {
+            if (go.GetComponent<GameManager>().id < this.id)
+            {
                 Destroy(gameObject);
             }
         }
     }
 
-    public void Complete(Scene s) {
-        foreach (GameObject go in points) {
+    public void Complete(Scene s)
+    {
+        foreach (GameObject go in points)
+        {
             PointOfInterest poi = go.GetComponent<PointOfInterest>();
-            if (poi.SceneIndex() == s.buildIndex){
+            if (poi.SceneIndex() == s.buildIndex)
+            {
                 poi.SetPointVisible(true);
             }
         }
     }
 
-    public void LisaaPiste() {
+    public void LisaaPiste(GameObject aktivaattori)
+    {
         pisteet++;
-        print(pisteet+" "+voittopisteet);
-        if (pisteet >= voittopisteet) {
-            SceneManager.LoadScene("outro");
+        if (GameIsFinished()) {
+            GetComponent<AudioSource>().time = 12;
+            GetComponent<AudioSource>().Play(); 
         }
+        print(pisteet + " " + voittopisteet);
+        GameObject go = GameObject.Find("Jakoavainmenu");
+        if (go != null) go.GetComponent<Jakoavainmenu>().Aktivoi(aktivaattori);
     }
 
+    public void LisaaPiste()
+    {
+        LisaaPiste(null);
+    }
+
+    public bool GameIsFinished() {
+        return pisteet >= 7;
+    }
 }

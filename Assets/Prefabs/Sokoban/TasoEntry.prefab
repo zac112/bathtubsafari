@@ -105,6 +105,7 @@ GameObject:
   - component: {fileID: 6046432985075429173}
   - component: {fileID: 388433563481590428}
   - component: {fileID: -6885136832369869938}
+  - component: {fileID: 2584963688145749380}
   m_Layer: 0
   m_Name: TasoEntry
   m_TagString: Untagged
@@ -216,3 +217,15 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.64, y: 0.64}
   m_EdgeRadius: 0
+--- !u!114 &2584963688145749380
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7738506216718348451}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89a4c086db98ce7469740a828a12f6a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

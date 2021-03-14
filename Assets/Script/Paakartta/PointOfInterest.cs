@@ -12,6 +12,8 @@ public class PointOfInterest : MonoBehaviour
     //Start StartCoroutine("Liike")
 
     void OnMouseDown() {
+        GameObject go = GameObject.Find("Jakoavainmenu");
+        if (go != null) go.transform.position = new Vector3(40,40,40);
         SceneManager.LoadScene(scene);
     }
 
@@ -22,6 +24,7 @@ public class PointOfInterest : MonoBehaviour
     public void SetPointVisible(bool visible) {
         this.visible = visible;
         gameObject.SetActive(visible);
+        
     }
 
 }
